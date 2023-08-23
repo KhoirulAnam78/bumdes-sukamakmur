@@ -17,6 +17,6 @@ Route::get('/', function () {
     return "Test";
 });
 
-Route::get('/test', function () {
+Route::get('/product', function () {
     return "<h1>Test</h1>";
 });
