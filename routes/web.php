@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return "Test";
+    return view('welcome');
 });
 
-Route::get('/product', function () {
+Route::get('/test', function () {
     return "<h1>Test</h1>";
 });
