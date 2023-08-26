@@ -100,20 +100,22 @@ https://templatemo.com/tm-546-sixteen-clothing
                         <h2>Produk</h2>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="{{ asset('assets/homepage/assets/images/product_01.jpg') }}"
-                                alt=""></a>
-                        <div class="down-content">
-                            <a href="#">
-                                <h3 style="color:orangered">Jahe Bubuk</h3>
-                            </a> <br>
-                            <h4 style="color:orange">100 gr</h4>
-                            <h4 style="color:orange">Rp. 25.75</h4>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                @foreach ($produk as $item)
+                    <div class="col-md-6">
+                        <div class="product-item">
+                            <a href="#"><img src="{{ asset('storage/' . $item->image) }}" alt=""></a>
+                            <div class="down-content">
+                                <a href="#">
+                                    <h3 style="color:orangered">{{ $item->nama }}</h3>
+                                </a> <br>
+                                <h4 style="color:orange">{{ $item->berat }}</h4>
+                                <h4 style="color:orange">Rp. {{ $item->harga }}</h4>
+                                <p>{{ $item->deskripsi }}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
