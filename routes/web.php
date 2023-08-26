@@ -17,7 +17,9 @@ use App\Http\Controllers\ProdukController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage', [
+        'produk' => Produk::all()
+    ]);
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
