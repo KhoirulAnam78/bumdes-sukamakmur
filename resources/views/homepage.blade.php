@@ -101,7 +101,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                     </div>
                 </div>
                 @foreach ($produk as $item)
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="product-item">
                             <a href="#"><img src="{{ asset('storage/' . $item->image) }}" alt=""></a>
                             <div class="down-content">
