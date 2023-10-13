@@ -78,11 +78,11 @@ https://templatemo.com/tm-546-sixteen-clothing
 
     <!-- Page Content -->
     <!-- Banner Starts Here -->
-    <div class="banner header-text">
+    <div class="banner header-text justify-content-center">
         <div class="owl-banner owl-carousel">
             <div class="banner-item-01"
-                style="background-image: url('{{ asset('assets/homepage/assets/images/bumdes-1.jpeg') }}')">
-                <div class="text-content" style="background-color: orange">
+                style="background-image: url('{{ asset('assets/homepage/assets/images/jahe.jpg') }}')">
+                <div class="text-content" style="background-color: orange; width:50%;">
                     <h3 class="mt-3" style="color:white">SELAMAT DATANG</h3>
                     <h6 class="mb-3" style="color:white">BUMDES SUKAMAKMUR memiliki produk olahan dari kunyit dan jahe
                     </h6 style="color:white">
