@@ -165,22 +165,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-heading">
+                    <div class="section-heading" style="margin:50px 0px">
                         <h2>Produk</h2>
                     </div>
                 </div>
                 @foreach ($produk as $item)
                     <div class="col-md-4">
-                        <div class="product-item">
-                            <a href="#"><img src="{{ asset('storage/' . $item->image) }}" alt=""></a>
-                            <div class="down-content">
-                                <a href="#">
-                                    <h3 style="color:orangered">{{ $item->nama }}</h3>
-                                </a> <br>
-                                <h4 style="color:orange">{{ $item->berat }}</h4>
-                                <h4 style="color:orange">Rp. {{ $item->harga }}</h4>
-                                <p>{{ $item->deskripsi }}
-                                </p>
+                        <div class="card" style="margin: 20px 0px; background-color: white; padding:10px">
+                            <div class="card-body">
+                                <div class="product-item">
+                                    <a href="#">
+                                        <img src="{{ asset('storage/' . $item->image) }}" alt="">
+                                    </a>
+                                    <div class="down-content">
+
+                                        <h3 style="color:orangered">{{ $item->nama }}</h3>
+                                        <h4 style="color:orange">{{ $item->berat }}</h4>
+                                        <h4 style="color:orange">Rp. {{ $item->harga }}</h4>
+                                        <p>{{ $item->deskripsi }}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -226,8 +231,8 @@
     <div class="clear"></div>
     <!--Our Blog Start-->
     <div class="kontak" id="templatemo_blog">
-        
-        
+
+
     </div>
     <!--Our Blog End-->
     <div class="clear" id="kontak"></div>
@@ -464,7 +469,9 @@
         $("#top-menu"),
         topMenuHeight
         =
-        topMenu.outerHeight() + 15,
+        topMenu.outerHeight()
+        +
+        15,
         //
         All
         list
@@ -480,7 +487,8 @@
         items
         scrollItems
         =
-        menuItems.map(function() {
+        menuItems.map(function()
+        {
         var
         item
         =
@@ -508,7 +516,8 @@
         fancy
         scroll
         animation
-        menuItems.click(function(e) {
+        menuItems.click(function(e)
+        {
         var
         href
         =
@@ -521,9 +530,14 @@
         ?
         0
         :
-        $(href).offset().top - topMenuHeight + 1;
+        $(href).offset().top
+        -
+        topMenuHeight
+        +
+        1;
         $('html,
-        body ').stop().animate({
+        body
+        ').stop().animate({
         scrollTop:
         offsetTop
         },
@@ -534,7 +548,8 @@
         Bind
         to
         scroll
-        $(window).scroll(function() {
+        $(window).scroll(function()
+        {
         //
         Get
         container
@@ -543,7 +558,9 @@
         var
         fromTop
         =
-        $(this).scrollTop() + topMenuHeight;
+        $(this).scrollTop()
+        +
+        topMenuHeight;
         //
         Get
         id
@@ -554,7 +571,8 @@
         var
         cur
         =
-        scrollItems.map(function() {
+        scrollItems.map(function()
+        {
         if
         ($(this).offset().top
     < fromTop) return this; }); // Get the id of the current element cur=cur[cur.length-1]; var id=cur && cur.length ?
